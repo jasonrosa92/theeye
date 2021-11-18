@@ -32,7 +32,8 @@ $ git init
 ```
 - To clone the repository type the following command in the terminal:
 ```
-$ git clone https://github.com/jasonrosa92/theeye
+$ git clone https://github.com/jasonrosa92/theeye.git
+
 ```
 #### Installing the necessary components:
 - With the virtual environment active and the repository cloned, type the following command to install the necessary components:
@@ -45,7 +46,7 @@ If you followed the described steps correctly, just run the following command to
 
 Make sure you have docker and docker-compose installed.
 ``` docker
-https://github.com/jasonrosa92/theeye
+https://github.com/jasonrosa92/theeye.git
 $ sudo docker-compose up --build -d
 ```
 Run rabbit and start celery:
