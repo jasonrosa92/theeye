@@ -2,8 +2,8 @@ import json
 
 from celery import shared_task
 
-from .api import EventUserSerializer
-from .models import ErrorsLog
+from apps.events.api.serializers import EventUserSerializer
+from apps.errors.models import ErrorsLog
 
 
 @shared_task

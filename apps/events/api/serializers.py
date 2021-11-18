@@ -1,7 +1,7 @@
 from django.utils import timezone
 from rest_framework import serializers
 
-from errors.models import EventUser
+from apps.events.models import EventUser
 
 
 class EventUserSerializer(serializers.ModelSerializer):

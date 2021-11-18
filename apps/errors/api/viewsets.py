@@ -1,7 +1,6 @@
 from rest_framework import viewsets
-from .models import ErrorsLog
 from .serializers import ErrorLogSerializer
-
+from apps.errors.models import ErrorsLog
 
 
 class ErrorLogView(viewsets.ReadOnlyModelViewSet):

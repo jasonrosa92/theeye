@@ -3,9 +3,9 @@ from rest_framework import viewsets, mixins
 from rest_framework import status
 from rest_framework.response import Response
 
-from events.models import EventUser
+from apps.events.models import EventUser
 from .serializers import EventUserSerializer
-from .tasks import event_task
+from apps.events.tasks.events import event_task
 
 
 class EventView(mixins.ListModelMixin,  viewsets.GenericViewSet):
