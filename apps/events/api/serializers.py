@@ -1,16 +1,17 @@
 from django.utils import timezone
 from rest_framework import serializers
 
-from .models import EventUser, ErrorsLog
+from errors.models import EventUser
 
 
 class EventUserSerializer(serializers.ModelSerializer):
     """
     Data Validation Serializer
     """
+
     class Meta:
         model = EventUser
-        exclude = ['saved_date',]
+        exclude = ['saved_date', ]
 
     def data_validator(self, value):
         """
@@ -33,10 +34,3 @@ class EventUserSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Timestamp is invalid")
 
         return value
-
-
-class ErrorLogSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = ErrorsLog
-        fields = '__all__'
